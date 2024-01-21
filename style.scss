@@ -1,0 +1,327 @@
+@font-face {
+  font-weight: 400;
+  font-family: Cousine;
+  src: url(./fonts/Cousine/Cousine-Regular.ttf);
+}
+@font-face {
+  font-weight: 700;
+  font-family: Cousine;
+  src: url(./fonts/Cousine/Cousine-Bold.ttf);
+}
+@font-face {
+  font-weight: 700;
+  font-family: Merriweather Sans;
+  src: url(./fonts/Merriweather_Sans/static/MerriweatherSans-Bold.ttf);
+}
+@font-face {
+  font-weight: 800;
+  font-family: Merriweather Sans;
+  src: url(./fonts/Merriweather_Sans/static/MerriweatherSans-ExtraBold.ttf);
+}
+@font-face {
+  font-weight: 400;
+  font-family: Merriweather Sans;
+  src: url(./fonts/Merriweather_Sans/static/MerriweatherSans-Regular.ttf);
+}
+@font-face {
+  font-weight: 400;
+  font-family: Roboto Condensed;
+  src: url(./fonts/Roboto_Condensed/static/RobotoCondensed-Regular.ttf);
+}
+@font-face {
+  font-weight: 700;
+  font-family: Roboto Condensed;
+  src: url(./fonts/Roboto_Condensed/static/RobotoCondensed-Bold.ttf);
+}
+.header__topBar {
+  background-color: #f6f6f6;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  &__left {
+    display: flex;
+    gap: 40px;
+  }
+  &__right {
+    display: flex;
+    gap: 40px;
+  }
+  &_link {
+    font-family: "Merriweather Sans";
+    font-size: 11px;
+    line-height: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #7e7e7e;
+  }
+  &__details {
+    position: relative;
+  }
+  &__details_link summary {
+    display: block;
+  }
+  &__details_link summary::-webkit-details-marker {
+    display: none;
+  }
+  &__details_link summary::after {
+    content: "▼";
+    padding: 0 5px;
+  }
+  &__details_link details[open] > summary::after {
+    content: "▼";
+  }
+}
+.details_block {
+  position: absolute;
+  top: 18px;
+  left: 11px;
+}
+.header__search {
+  display: flex;
+  justify-content: end;
+  margin-top: 16px;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e1e1e1;
+  &_submit {
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: url(./img/search_icon.png) no-repeat 50% 50%;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  &_search {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    padding: 11px 0 11px 11px;
+  }
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 19px;
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__right_list {
+    position: relative;
+    display: flex;
+    gap: 49px;
+  }
+  &_link {
+    font-family: Cousine;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #565656;
+  }
+}
+.logo__name {
+  font-family: "Merriweather Sans";
+  font-size: 44px;
+  line-height: 19px;
+  font-weight: 700;
+  color: #454545;
+}
+
+// BIGMENU_______________________________________________________
+.list_hover {
+  padding-top: 1rem;
+}
+.list_hover:hover .bigMenu {
+  display: flex;
+}
+.bigMenu {
+  display: none;
+  flex-direction: column;
+  border: 1px solid black;
+  position: absolute;
+  top: 36px;
+  left: -506px;
+  padding: 40px 30px;
+  max-width: 1170px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  &__bottom {
+    display: flex;
+    gap: 42px;
+    margin-top: 57px;
+    &_block1 {
+      background-color: #cccccc;
+      display: flex;
+      align-items: center;
+      gap: 78px;
+    }
+    &_block2 {
+      background-color: #cccccc;
+    }
+    &_block2 p {
+      padding: 54px 49px 49px;
+      font-family: "Roboto Condensed";
+      font-size: 35px;
+      line-height: 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    &_block3 {
+      background-color: #cccccc;
+    }
+  }
+  &__block_sale {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #cccccc;
+  }
+  &__block_sale h2 {
+    padding: 102px 24px 35px;
+    text-align: center;
+    font-family: "Merriweather Sans";
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &__block_sale span {
+    font-family: "Roboto Condensed";
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &__block_sale p {
+    padding: 0 58px 16px;
+    font-family: Arial;
+    font-size: 13px;
+    line-height: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &_link {
+    min-width: 190px;
+  }
+  &_link a {
+    display: block;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 32px;
+    color: #555555;
+  }
+  &_link a:hover {
+    color: #cf4647;
+  }
+}
+.block3__box {
+  display: flex;
+  flex-direction: column;
+  padding: 21px 182px 0 45px;
+}
+.box {
+  font-family: "Roboto Condensed";
+  line-height: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  &_text1 {
+    font-family: "Merriweather Sans";
+    font-size: 36px;
+    font-weight: 800;
+  }
+  &_text2 {
+    font-size: 28px;
+  }
+  &_text3 {
+    font-size: 29px;
+  }
+}
+.block {
+  &_text {
+    padding-right: 7px;
+    line-height: 32px;
+    color: #1b1b1b;
+    &_top {
+      font-family: "Roboto Condensed";
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &_middel {
+      font-family: "Merriweather Sans";
+      font-size: 15px;
+      font-weight: 700;
+      font-style: italic;
+      text-align: center;
+      text-decoration: dashed;
+    }
+    &_middel:before,
+    &_middel:after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      box-sizing: border-box;
+      width: 45px;
+      height: 2px;
+      background: #000;
+    }
+    &_middel:before {
+      margin-left: -100%;
+      margin-right: 6px;
+    }
+    &_middel:after {
+      margin-right: -100%;
+      margin-left: 6px;
+    }
+    &_bot {
+      font-family: "Merriweather Sans";
+      font-size: 34px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+  &_name {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 28px;
+  }
+}
+.title_link {
+  font-family: Cousine;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #666666;
+}
+.line_bottom {
+  width: 100%;
+  border-bottom: 1px solid #e4e4e4;
+}
+.block1_size {
+  font-family: Arial;
+  font-size: 15px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-left: 52px;
+}
