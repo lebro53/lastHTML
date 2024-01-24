@@ -498,6 +498,9 @@
   grid-template-rows: 430px repeat(2, 250px);
   grid-gap: 30px;
 }
+.advertising_bgColor {
+  background-color: #f3f3f3;
+}
 .advertising__block1 {
   grid-column: 1/3;
 }
@@ -794,4 +797,240 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #2f2f2f;
+}
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.catalog_links {
+  display: flex;
+  gap: 70px;
+  margin-top: 60px;
+}
+.catalog_links a {
+  padding-bottom: 9px;
+  border-bottom: 2px solid #fff;
+  font-family: "Merriweather Sans";
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #999999;
+}
+.catalog_links a:hover {
+  color: #444444;
+  border-bottom: 2px solid #444444;
+}
+.catalog__products {
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  grid-template-rows: repeat(2, 460px);
+  grid-gap: 30px;
+}
+
+.product__img {
+  position: relative;
+  background-color: #ccc;
+  padding-top: 18px;
+}
+.product__img_size {
+  visibility: hidden;
+  padding: 150px 88px;
+  font-family: Arial;
+  font-size: 15px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.product__img_size_visibility {
+  visibility: inherit;
+}
+.product__img__action {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: -3px;
+  padding: 9px 17px;
+  font-family: Arial;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 900;
+  color: #cf4647;
+  border: 3px solid #cf4647;
+}
+.product__img__action_visibility {
+  display: block;
+}
+.product__img__action_new {
+  text-transform: uppercase;
+  color: #524656;
+  border: 3px solid #524656;
+}
+.product__img__action_outStock {
+  text-transform: uppercase;
+  color: #999;
+  border: 3px solid #999;
+}
+.product__img__color {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: none;
+  gap: 10px;
+}
+.product__figcaption {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.product__figcaption_name {
+  width: 60%;
+  font-family: "Merriweather Sans";
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #444444;
+}
+.product__figcaption_price {
+  visibility: hidden;
+  font-family: Cousine;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 700;
+  color: #222222;
+}
+.product__cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product__cart_topButton {
+  margin-top: 10px;
+  display: none;
+  border: 2px solid #444444;
+}
+.product__cart_topButton button {
+  margin: 12px 0;
+  padding: 0 20px;
+  font-family: "Merriweather Sans";
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #444444;
+  background-color: #fff;
+  cursor: pointer;
+}
+.product__cart_topButton button:hover {
+  color: #be6868;
+}
+.product__cart_botButton {
+  display: none;
+}
+.product__cart_botButton button {
+  margin-top: 3px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-family: "Merriweather Sans";
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  font-style: italic;
+  color: #333333;
+}
+.product__cart_botButton button:hover {
+  color: #be6868;
+  border: 1px solid #333333;
+}
+
+.product:hover .product__img__color {
+  display: flex;
+}
+
+.product:hover .product__cart_topButton {
+  display: flex;
+}
+
+.product:hover .product__cart_botButton {
+  display: flex;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #555555;
+  box-shadow: inset 0px 0px 0px 2px #ffffff;
+  cursor: pointer;
+}
+.color_black {
+  background-color: #0e0c0f;
+}
+.color_blue {
+  background-color: #202a4e;
+}
+.color_darkRed {
+  background-color: #923349;
+}
+
+.border {
+  border: none;
+}
+.border_left {
+  border-left: 2px solid #444444;
+}
+.border_right {
+  border-right: 2px solid #444444;
+}
+
+.discount {
+  font-family: Cousine;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 700;
+  color: #999999;
+  text-decoration: line-through;
+}
+.discount_visibility {
+  visibility: inherit;
+}
+
+.showMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 105px;
+  background-color: #fff;
+  border: none;
+  font-family: "Merriweather Sans";
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 121px;
+  cursor: pointer;
+}
+
+.showMore:before,
+.showMore:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 520px;
+  height: 3px;
+  background: #ddd;
+}
+
+.showMore:before {
+  margin-left: -100%;
+  margin-right: 20px;
+}
+
+.showMore:after {
+  margin-right: -100%;
+  margin-left: 20px;
 }/*# sourceMappingURL=style.css.map */
